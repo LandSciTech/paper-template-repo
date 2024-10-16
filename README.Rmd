@@ -14,7 +14,7 @@ knitr::opts_chunk$set(collapse  = TRUE,
 
 
 
-CaribouDemographyQuebecPaper <img src="man/figures/compendium-sticker.png" align="right" style="float:right; height:120px;"/>
+paper-template-repo <img src="man/figures/compendium-sticker.png" align="right" style="float:right; height:120px;"/>
 =========================================================
 
 <!-- badges: start -->
