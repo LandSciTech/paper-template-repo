@@ -1,6 +1,6 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# CaribouDemographyQuebecPaper <img src="man/figures/compendium-sticker.png" align="right" style="float:right; height:120px;"/>
+# paper-template-repo <img src="man/figures/compendium-sticker.png" align="right" style="float:right; height:120px;"/>
 
 <!-- badges: start -->
 <!-- badges: end -->
