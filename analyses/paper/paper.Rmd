@@ -1,0 +1,183 @@
+---
+title: "This is a title"
+author:
+  - name: Josie Hughes
+    email: josie.hughes@ec.gc.ca
+    institute: [ECCC]
+    correspondence: true
+  - name: Sarah Endicott
+    email: sarah.endicott@ec.gc.ca
+    institute: [ECCC]
+    correspondence: false
+  - name: Anna M Calvert
+    email: anna.calvert@ec.gc.ca
+    institute: [ECCC]
+    correspondence: false
+  - name: Cheryl A Johnson
+    email: cheryl-ann.johnson@ec.gc.ca
+    institute: [ECCC]
+    correspondence: false
+
+institute:
+  - ECCC: Landscape Science and Technology Division, National Wildlife Research Center, Environment and Climate Change Canada, 1125 Colonel By Dr, Ottawa, ON, K1S 5B6, Canada
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: 
+    bookdown::word_document2:
+      fig_caption: yes
+      number_sections: no
+      reference_docx: "../templates/template.docx" # Insert path for the DOCX file
+      pandoc_args:
+      - --lua-filter=../templates/scholarly-metadata.lua
+      - --lua-filter=../templates/author-info-blocks.lua
+      - --lua-filter=../templates/pagebreak.lua
+bibliography: references.bib
+csl: "../templates/ecological-informatics.csl" # Insert path for the bib-style
+abstract: |
+  This is an abstract. This is an abstract. This is an abstract.This is an abstract. This is an abstract. This is an abstract.This is an abstract. This is an abstract. This is an abstract.This is an abstract. This is an abstract. This is an abstract.This is an abstract. This is an abstract. This is an abstract.This is an abstract. This is an abstract. This is an abstract.This is an abstract. This is an abstract. This is an abstract.This is an abstract. This is an abstract. This is an abstract.This is an abstract. This is an abstract. This is an abstract.
+keywords: |
+  keyword 1; keyword 2; keyword 3
+highlights: |
+  These are the highlights. 
+editor_options: 
+  chunk_output_type: inline
+  markdown: 
+    wrap: 72
+---
+
+<!-- This is the format for text comments that will be ignored during renderings. Do not put R code in these comments because it will not be ignored. -->
+
+<!-- With the following code you can access and display values from the yml header above. -->
+
+<!-- Link to data here: https://drive.google.com/file/d/179lw6MPK4l3xGmded9kofzJkB6VlJVb9/view?usp=sharing -->
+
+Keywords: `r rmarkdown::metadata$keywords`
+
+Highlights: `r rmarkdown::metadata$highlights`
+
+<!-- The following code chunk defines some general settings how code chunks should behave. -->
+
+```{r setup, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  warning = FALSE,
+  message = FALSE,
+  echo = FALSE,
+  comment = "#>",
+  fig.path = "../../figures/",
+  dpi = 300
+)
+```
+
+<!-- The actual document text starts here: -->
+
+# Introduction
+
+*The following shows an example paragraph with citations*
+The number of species threatened with extinction is high and getting
+higher [@ipbes_global_2019]. Reliable information on the status of
+populations and likely impacts of management are needed to inform
+conservation action, but effective monitoring is challenging and costly
+[@legg_why_2006; @lindenmayer_effective_2018; @wintle_allocating_2010;
+@dunham_strategic_2023].
+
+# Methods
+<!-- This is an R code chunk -->
+```{r setup2}
+library(ggplot2)
+library(dplyr)
+library(stringr)
+library(tidyr)
+library(purrr)
+library(ggpubr)
+library(MetBrewer)
+library(here)
+library(tmap)
+library(sf)
+
+# load any functions stored in R
+devtools::load_all(here::here())
+
+#set paths
+data_path_raw <- "data/raw-data/"
+data_path_drvd <- "data/derived-data/"
+
+pal_nm <- "Redon"
+
+fig_widths <- c(min = 1.18, single = 3.543, mid = 5.51, two = 7.48)
+
+
+```
+
+## Caribou population monitoring data and composition survey errors
+
+*This shows some examples of equations in text and in separate blocks*
+
+Given these assumptions and definitions, the sex and
+bias-corrected recruitment rate $X$ can be written as a function of the
+observed calf:cow ratio $R$, the cow multiplier $w$, the ratio of young
+bulls to adult females $q$, and the misidentification probabilities $u$
+and $z$ (see Supplement B for details). For simplicity, we combine the
+probabilities into a bias term $c$ that is integrated into
+the Bayesian population model and simulations (below):
+
+\begin{equation}
+  c=\frac{w(1+qu-u)}{(w+qu-u)(1-z)}; X=cR/2.
+  (\#eq:c)
+\end{equation}
+
+## Anthropogenic disturbance and monitoring scenarios
+
+*This includes and example of how to reference a table and a figure*
+
+In simulated monitoring scenarios, we assume collars are deployed in January, and
+continue to function for up to 6 years. The target number of collared females $n$ varies
+among scenarios, as does the total duration of the monitoring program
+$d$ and the ratio of uncollared to collared adults in the recruitment
+survey $w$ (Table \@ref(tab:monitoringScenarios)). Collars lost to
+mortality may be replaced each year ($o=1$), or there may be a 3 year
+gap between deployments ($o=4$).
+
+```{r monitoringScenarios, tab.cap="An example table"}
+knitr::kable(head(mtcars))
+```
+
+We focus on exploring a set of scenarios in which buffered anthropogenic
+disturbance, measured as the percentage of area within 500 m of some
+type of anthropogenic disturbance [@johnson_science_2020;
+@eccc_scientific_2011], increases by 1% per year (Figure
+\@ref(fig:figDisturbance)). 
+
+```{r figDisturbance, fig.cap="An example figure", cache=TRUE}
+ggplot(mtcars, aes(cyl, disp))+
+  geom_point()
+
+```
+
+<!-- The following line inserts a page break  -->
+
+\newpage
+
+# References
+
+<!-- The following line ensures the references appear here for the MS Word or HTML output files, rather than right at the end of the document (this will not work for PDF files):  -->
+
+::: {#refs}
+:::
+
+
+### Colophon
+
+This report was generated on `r Sys.time()` using the following
+computational environment and dependencies:
+
+```{r colophon, cache = FALSE}
+# which R packages and versions?
+#if ("devtools" %in% installed.packages()) devtools::session_info()
+```
+
+The current Git commit details are:
+
+```{r}
+# what commit is this file at? 
+#if ("git2r" %in% installed.packages() & git2r::in_repository(path = ".")) git2r::repository(here::here())  
+```
