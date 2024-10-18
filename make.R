@@ -27,5 +27,8 @@ devtools::load_all(here::here())
 
 ## Run Project ----
 
-# List all R scripts in a sequential order and using the following form:
+# List all source files in a sequential order and using the following form:
+# For scripts:
 # source(here::here("analyses", "script_X.R"))
+# For Rmd files
+# rmarkdown::render(here::here("analyses/paper", "paper.Rmd")
