@@ -1,20 +1,12 @@
 ---
 title: "This is a title"
 author:
-  - name: Josie Hughes
-    email: josie.hughes@ec.gc.ca
+  - name: First Last
+    email: email@email.ca
     institute: [ECCC]
     correspondence: true
-  - name: Sarah Endicott
-    email: sarah.endicott@ec.gc.ca
-    institute: [ECCC]
-    correspondence: false
-  - name: Anna M Calvert
-    email: anna.calvert@ec.gc.ca
-    institute: [ECCC]
-    correspondence: false
-  - name: Cheryl A Johnson
-    email: cheryl-ann.johnson@ec.gc.ca
+  - name: 2First 2Last
+    email: email@email.ca
     institute: [ECCC]
     correspondence: false
 
@@ -103,6 +95,7 @@ data_path_drvd <- "data/derived-data/"
 
 pal_nm <- "Redon"
 
+# figure widths that journals often want
 fig_widths <- c(min = 1.18, single = 3.543, mid = 5.51, two = 7.48)
 
 
