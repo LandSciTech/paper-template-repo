@@ -1,10 +1,10 @@
-#' CaribouDemographyQuebecPaper: A Research Compendium
+#' Title
 #' 
 #' @description 
 #' A paragraph providing a full description of the project and describing each 
 #' step of the workflow.
 #' 
-#' @author Sarah Endicott \email{sarah.endicott@ec.gc.ca}
+#' @author First Last \email{email@email.ca}
 #' 
 #' @date 2024/10/16
 
