@@ -1,17 +1,19 @@
-Package: CaribouDemographyQuebecPaper
+Package: PackageName
 Type: Package
 Title: The Title of the Project
 Version: 0.0.0.9000
 Authors@R: c(
-    person(given   = "Sarah",
-           family  = "Endicott",
-           role    = c("aut", "cre", "cph"),
-           email   = "sarah.endicott@ec.gc.ca",
-           comment = c(ORCID = "0000-0001-9644-5343")))
+    person(given   = "First",
+           family  = "Last",
+           role    = c("aut", "cre"),
+           email   = "email@email.ca",
+           comment = c(ORCID = "0000-0000-0000-0000")),
+      person(given="His Majesty the King in Right of Canada, as represented by the Minister of Environment and Climate Change",
+         role = "cph")))
 Description: A paragraph providing a full description of the project (on 
     several lines...)
-URL: https://github.com/LandSciTech/CaribouDemographyQuebecPaper
-BugReports: https://github.com/LandSciTech/CaribouDemographyQuebecPaper/issues
+URL: https://github.com/LandSciTech/PackageName
+BugReports: https://github.com/LandSciTech/PackageName/issues
 License: GPL (>= 2)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
