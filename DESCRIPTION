@@ -8,8 +8,8 @@ Authors@R: c(
            role    = c("aut", "cre"),
            email   = "email@email.ca",
            comment = c(ORCID = "0000-0000-0000-0000")),
-      person(given="His Majesty the King in Right of Canada, as represented by the Minister of Environment and Climate Change",
-         role = "cph")))
+    person(given="His Majesty the King in Right of Canada, as represented by the Minister of Environment and Climate Change",
+           role = "cph"))
 Description: A paragraph providing a full description of the project (on 
     several lines...)
 URL: https://github.com/LandSciTech/PackageName
