@@ -1,4 +1,4 @@
-^CaribouDemographyQuebecPaper\.Rproj$
+^PackageName\.Rproj$
 ^\.Rproj\.user$
 ^\.DS_Store$
 ^LICENSE\.md$
@@ -10,3 +10,4 @@
 ^make\.R$
 ^README\.Rmd$
 ^README\.html$
+^PackageName\.Rproj$

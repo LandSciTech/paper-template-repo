@@ -18,10 +18,9 @@
 
 # User-specific files ----
 README.html
-inst/doc
-man/
-NAMESPACE
 .Rproj.user
 .Rdata
 .httr-oauth
 .quarto
+paper.docx
+paper_cache/

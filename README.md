@@ -28,13 +28,13 @@ FEATURES }}**
 
 This repository is structured as follow:
 
--   [`DESCRIPTION`](https://github.com/LandSciTech/CaribouDemographyQuebecPaper/tree/main/DESCRIPTION):
+-   [`DESCRIPTION`](https://github.com/LandSciTech/PackageName/tree/main/DESCRIPTION):
     contains project metadata (authors, date, dependencies, etc.)
 
--   [`make.R`](https://github.com/LandSciTech/CaribouDemographyQuebecPaper/tree/main/make.R):
+-   [`make.R`](https://github.com/LandSciTech/PackageName/tree/main/make.R):
     main R script to run the entire project
 
--   [`R/`](https://github.com/LandSciTech/CaribouDemographyQuebecPaper/tree/main/R):
+-   [`R/`](https://github.com/LandSciTech/PackageName/tree/main/R):
     contains R functions developed especially for this project
 
 -   **{{ LIST ADDITIONAL FILES/FOLDER }}**
@@ -54,7 +54,7 @@ To install this compendium:
 ## Usage
 
 Launch the
-[`make.R`](https://github.com/LandSciTech/CaribouDemographyQuebecPaper/tree/main/make.R)
+[`make.R`](https://github.com/LandSciTech/PackageName/tree/main/make.R)
 file with:
 
     source("make.R")
@@ -76,7 +76,7 @@ Please use the following citation:
 
 All types of contributions are encouraged and valued. For more
 information, check out our [Contributor
-Guidelines](https://github.com/LandSciTech/CaribouDemographyQuebecPaper/blob/main/CONTRIBUTING.md).
+Guidelines](https://github.com/LandSciTech/PackageName/blob/main/CONTRIBUTING.md).
 
 Please note that this project is released with a [Contributor Code of
 Conduct](https://contributor-covenant.org/version/2/1/CODE_OF_CONDUCT.html).

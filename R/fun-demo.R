@@ -8,7 +8,7 @@
 #' 
 #' @param x a character of length 1. Default is `'Hello world'`.
 #'
-#' @return The value of `x` (only if the result is assigned to a variable).
+#' @return Prints `x` as a message. The value of `x` is returned invisibly 
 #' 
 #' @export
 #'
